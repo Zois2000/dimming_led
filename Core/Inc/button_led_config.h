@@ -17,8 +17,6 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #pragma once
-#include "gpio.h"
-#include <stdint.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -28,13 +26,14 @@
 typedef struct {
     GPIO_TypeDef* port;
     uint16_t pin;
+    uint32_t button_last_time_ms;
 } button_config;
 
 // Struktur zur Aufbewahrung von Informationen über LEDs
 typedef struct {
     GPIO_TypeDef* port;
     uint16_t pin;
-    uint32_t time;
+    uint32_t led_last_time_ms;
     uint8_t led_state;
 } led_config;
 
@@ -46,6 +45,7 @@ typedef struct {
 // Anzahl der Tasten und LEDs
 #define NUM_Buttons 5
 #define NUM_LEDS 5
+#define DEBOUNCE_TIME_MS 200
 
 /* USER CODE END PD */
 

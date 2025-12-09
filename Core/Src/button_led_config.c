@@ -17,6 +17,7 @@
 /* Includes ------------------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "button_led_config.h"
+#include "gpio.h"
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
