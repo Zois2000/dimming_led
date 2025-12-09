@@ -17,6 +17,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #pragma once
+
+#include "gpio.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -33,8 +35,11 @@ typedef struct {
 typedef struct {
     GPIO_TypeDef* port;
     uint16_t pin;
+    uint16_t led_on_ms;      // Einschaltzeit in Millisekunden
+    uint16_t led_off_ms;     // Ausschaltzeit in Millisekunden
     uint32_t led_last_time_ms;
-    uint8_t led_state;
+    uint8_t led_duty_time;
+    uint8_t led_duty_cycle_state;
 } led_config;
 
 /* USER CODE END PTD */

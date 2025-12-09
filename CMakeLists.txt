@@ -47,6 +47,7 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     # Add your custom source files here
     ${CMAKE_CURRENT_SOURCE_DIR}/Core/Src/basic_functions.c  # Dein benutzerdefinierter Code
     ${CMAKE_CURRENT_SOURCE_DIR}/Core/Src/button_led_config.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/Core/Src/pwm_functions.c
 )
 
 # Add include paths

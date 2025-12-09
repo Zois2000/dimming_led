@@ -18,11 +18,11 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "button_led_config.h"
+#include "stm32f1xx_hal.h"
+#include "stm32f1xx_hal_gpio.h"
 #include "usart.h"
 #include "gpio.h"
-#include "basic_functions.h"
-
+#include "pwm_functions.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -98,8 +98,10 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    custom_pwm(50, 10,2);
-    custom_pwm(75, 5, 3);
+    dimming_state_maschine(1,2);
+    dimming_state_maschine(5,3);
+    dimming_state_maschine(10,4);
+  
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

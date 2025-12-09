@@ -17,7 +17,6 @@
 /* Includes ------------------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "button_led_config.h"
-#include "gpio.h"
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
@@ -36,11 +35,11 @@ const int num_buttons = NUM_Buttons;  // Speichert die Anzahl der Tasten
 
 // Struktur zur Aufbewahrung von Informationen zu LEDs
 led_config led_configs[NUM_LEDS] = {
-		{led_1_GPIO_Port, led_1_Pin, 0, 0},
-		{led_2_GPIO_Port, led_2_Pin, 0, 0},
-		{led_3_GPIO_Port, led_3_Pin, 0, 0},
-		{led_4_GPIO_Port, led_4_Pin, 0, 0},
-		{led_user_GPIO_Port, led_user_Pin, 0, 0},
+		{led_1_GPIO_Port, led_1_Pin, 0, 0, 0, 0, 0},
+		{led_2_GPIO_Port, led_2_Pin, 0, 0, 0, 0, 0},
+		{led_3_GPIO_Port, led_3_Pin, 0, 0, 0, 0, 0},
+		{led_4_GPIO_Port, led_4_Pin, 0, 0, 0, 0, 0},
+		{led_user_GPIO_Port, led_user_Pin, 0, 0, 0, 0, 0},
 };
 const int num_leds = NUM_LEDS;  // Speichert die Anzahl der LEDs
 /* USER CODE END PV */
