@@ -3,7 +3,7 @@
   ******************************************************************************
   * @file    button_led_config.h
   * @brief   This file contains the header for the button_led_config function
-  * @author  Andreas Schweizer (andreas.schweizer@studmail.htw-aalen.de).
+  * @author  Andreas Schweizer (andreas.schweizer@mailbox.org).
   ******************************************************************************
   * @attention
   *
@@ -24,22 +24,22 @@
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
 
-// Struktur zur Aufbewahrung von Informationen über Tasten
+// Structure to store button configuration
 typedef struct {
-    GPIO_TypeDef* port;
-    uint16_t pin;
-    uint32_t button_last_time_ms;
+    GPIO_TypeDef* port;           // GPIO port for the button
+    uint16_t pin;                 // GPIO pin for the button
+    uint32_t button_last_time_ms; // Last time the button was pressed (in ms)
 } button_config;
 
-// Struktur zur Aufbewahrung von Informationen über LEDs
+// Structure to store LED configuration
 typedef struct {
-    GPIO_TypeDef* port;
-    uint16_t pin;
-    uint16_t led_on_ms;      // Einschaltzeit in Millisekunden
-    uint16_t led_off_ms;     // Ausschaltzeit in Millisekunden
-    uint32_t led_last_time_ms;
-    uint8_t led_duty_time;
-    uint8_t led_duty_cycle_state;
+    GPIO_TypeDef* port;           // GPIO port for the LED
+    uint16_t pin;                 // GPIO pin for the LED
+    uint16_t led_on_ms;           // LED on time in milliseconds
+    uint16_t led_off_ms;          // LED off time in milliseconds
+    uint32_t led_last_time_ms;    // Last time the LED was toggled (in ms)
+    uint8_t led_duty_time;        // LED duty cycle in percentage (0-100)
+    uint8_t led_duty_cycle_state; // State of the LED (e.g., increasing or decreasing brightness)
 } led_config;
 
 /* USER CODE END PTD */
@@ -47,22 +47,21 @@ typedef struct {
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
 
-// Anzahl der Tasten und LEDs
-#define NUM_Buttons 5
-#define NUM_LEDS 5
-#define DEBOUNCE_TIME_MS 200
+// Number of buttons and LEDs in the system
+#define NUM_BUTTONS 5           // Number of buttons
+#define NUM_LEDS 5              // Number of LEDs
+#define DEBOUNCE_TIME_MS 200    // Debounce time for buttons in milliseconds
 
 /* USER CODE END PD */
 
 /* Exported functions prototypes ---------------------------------------------*/
 /* USER CODE BEGIN EFP */
 
-// Arrays für Tasten- und LED-Konfigurationen sowie Variablen zur Speicherung der Anzahl
-
-extern button_config button_configs[NUM_Buttons];
-extern led_config led_configs[NUM_LEDS];
-extern const int num_buttons;
-extern const int num_leds;
+// Externally declared arrays for button and LED configurations, and variables to store their counts
+extern button_config button_configs[NUM_BUTTONS]; // Array for button configurations
+extern led_config led_configs[NUM_LEDS];          // Array for LED configurations
+extern const int num_buttons;                     // Number of buttons
+extern const int num_leds;                        // Number of LEDs
 
 /* USER CODE END EFP */
 

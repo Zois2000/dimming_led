@@ -98,9 +98,9 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    dimming_state_maschine(1,2);
-    dimming_state_maschine(5,3);
-    dimming_state_maschine(10,4);
+    update_led_dimming(1,2);
+    update_led_dimming(5,3);
+    update_led_dimming(10,4);
   
     /* USER CODE END WHILE */
 

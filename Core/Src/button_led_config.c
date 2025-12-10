@@ -3,7 +3,7 @@
   ******************************************************************************
   * @file    button_led_config.c
   * @brief   This file contains the cunstroctions for the buttons and leds
-  * @author  Andreas Schweizer (andreas.schweizer@studmail.htw-aalen.de).
+  * @author  Andreas Schweizer (andreas.schweizer@mailbox.org).
   ******************************************************************************
   * @attention
   *
@@ -24,14 +24,14 @@
 /* USER CODE BEGIN PV */
 
 // Struktur zur Aufbewahrung von Informationen zu Tasten
-button_config button_configs[NUM_Buttons] = {
+button_config button_configs[NUM_BUTTONS] = {
 		{button_1_GPIO_Port, button_1_Pin},
 		{button_2_GPIO_Port, button_2_Pin},
 		{button_3_GPIO_Port, button_3_Pin},
 		{button_4_GPIO_Port, button_4_Pin},
 		{button_user_GPIO_Port, button_user_Pin},
 };
-const int num_buttons = NUM_Buttons;  // Speichert die Anzahl der Tasten
+const int num_buttons = NUM_BUTTONS;  // Speichert die Anzahl der Tasten
 
 // Struktur zur Aufbewahrung von Informationen zu LEDs
 led_config led_configs[NUM_LEDS] = {
